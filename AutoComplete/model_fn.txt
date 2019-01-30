@@ -1,0 +1,11 @@
+public function p_search($id){
+		$this->db->distinct();
+   		$this->db->select("p_name");
+    	$this->db->from('product');
+    	$this->db->like('p_name', $id);
+     	/*$this->db->group_by('');*/
+     	$this->db->limit(5);
+    	$query = $this->db->get();
+    
+    	return $query->result();
+    }

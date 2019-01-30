@@ -1,0 +1,29 @@
+ul.search-result {
+	display: block;
+	position: absolute;
+    
+	text-align: right
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 120px;
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+	color: #1abc9a;
+	background: white;
+	
+}
+ul.search-result li {
+    padding: 10px 20px 0;
+}
+ul.search-result li:last-child {
+    padding-bottom: 20px;
+}
+li ul.search-result li a {
+    color: #fff;
+}
+ul.search-result li:hover {
+    color: #FDB45E;
+
+}

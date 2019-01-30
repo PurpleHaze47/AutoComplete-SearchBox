@@ -1,0 +1,7 @@
+public function autocomplete(){
+		$s = $this->input->post('term');	
+		
+    	$data['var']= $this->User_Model->p_search($s); 
+    	echo json_encode($data['var']);
+
+	}

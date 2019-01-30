@@ -1,0 +1,39 @@
+<script>
+							$(document).ready(function(){
+    							$('#text').keyup( function() {
+       							 var min_length = 1; 
+   								 var keyword = $('#text').val();
+    								if (keyword.length >= min_length) {
+       								 $.ajax({
+           							 url: 'http://localhost/eshop/autocomplete',
+           							type: 'POST',
+             						dataType: 'json',
+            						data: { term: $("#text").val()},
+            						success:function(data){
+
+            							$(".search-result").html('');
+            							$('.search-result').show();
+                						$.each(data, function() {
+ 											$.each(this, function(k, v) {
+      											$(".search-result").append("<li onClick=\"setSearchBoxValue(\'"+v+"\')\">" + v + "</li>");
+  											});
+										});
+     						}
+        							});
+    								} else {
+        								$('.search-result').hide();
+    									}
+								});
+							});
+							function setSearchBoxValue(name){
+								$('#text').val(name);
+							}
+
+							</script>
+<form method="post">
+							
+ 								<input type="text" name="text" id="text" placeholder="S e a r c h" /> 
+ 								<ul class="search-result" > </ul>
+
+ 							
+							</form>
