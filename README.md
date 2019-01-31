@@ -1,2 +1,5 @@
 # AutoComplete-SearchBox
-Suggestions existing products based on typed values in search-box
+1.Copy Paste the functions in your view, controller and model
+2.add .css( optional )
+
+limit is set to 5 values from database
