@@ -1,29 +1,85 @@
-ul.search-result {
+AutoComplete/search-dropdown.css
+
+.search-result {
 	display: block;
 	position: absolute;
-    
-	text-align: right
+    cursor: pointer;
+    padding: 0px;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 120px;
+    margin: 0;    
     -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-	color: #1abc9a;
-	background: white;
-	
+    z-index: 1;	
+	background: white;	
 }
-ul.search-result li {
-    padding: 10px 20px 0;
+.search-result li {
+	text-align: center;
+	width: 170px;
+	padding: 10px 20px;
 }
-ul.search-result li:last-child {
-    padding-bottom: 20px;
+.search-result li:nth-child(1){
+	border-right: 4px solid #5DADE2;
+	background: linear-gradient(to left, #5DADE2 50%,  white 50%);
+	background-size: 200% 100%;
+    background-position: left;
+    transition: all .5s ;
 }
-li ul.search-result li a {
-    color: #fff;
+.search-result li:nth-child(2){
+	border-right: 4px solid #58D68D;
+	background: linear-gradient(to left, #ABEBC6 50%,  white 50%);
+	background-size: 200% 100%;
+    background-position: left;
+    transition: all .5s ;
 }
-ul.search-result li:hover {
-    color: #FDB45E;
-
+.search-result li:nth-child(3){
+	border-right: 4px solid #F4D03F;
+	background: linear-gradient(to left, #F9E79F 50%,  white 50%);
+	background-size: 200% 100%;
+    background-position: left;
+    transition: all .5s ;
+}
+.search-result li:nth-child(4){
+	border-right: 4px solid #DC7633;
+	background: linear-gradient(to left, #EDBB99 50%,  white 50%);
+	background-size: 200% 100%;
+    background-position: left;
+    transition: all .5s ;
+}
+.search-result li:nth-child(5){
+	border-right: 4px solid #AAB7B8;
+	background: linear-gradient(to left, #D5DBDB 50%,  white 50%);
+	background-size: 200% 100%;
+    background-position: left;
+    transition: all .5s ;
+}
+.search-result li:nth-child(1):hover{	
+	background-position: right;
+	color: white;
+}
+.search-result li:nth-child(2):hover{
+	background-position: right;
+	color: white;
+}
+.search-result li:nth-child(3):hover{
+	background-position: right;
+	color: white;
+}
+.search-result li:nth-child(4):hover{
+	background-position: right;
+	color: white;
+}
+.search-result li:nth-child(5):hover{
+	background-position: right;
+	color: white;
+}
+.search-result li:hover {
+	background-position: right;
+    color: white;    
+}
+.search_box input{
+	height: 40px;
+	width: 170px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding-left: 20px; 
 }
